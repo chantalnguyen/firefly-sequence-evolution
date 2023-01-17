@@ -5,6 +5,9 @@ function fin_seq = vocab_generator_consang(w_p, w_s, num_flies)
 % free-to-evolve sequence
 % then, fix the 3 and add a new sequence that can evolve
 % then repeat until we achieve 6 species
+if nargin < 3
+    num_flies = 8;
+end
 rng('shuffle')
 num_species = 1; % num_species is always 1 - we evolve 1 species at a time
 %%
